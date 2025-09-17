@@ -1,0 +1,23 @@
+JWT token RestAPI login system.
+Database and a table
+UI to call login endpoints
+Generate JWT token
+Database user table - save
+Signup endpoint FIrst name, last name, email, username, password. Hash the password. Save it, login endpoint with username and pw. Take username provided by user, hash it, compare hashed values with one in DB. Generate JWT token send it back to user for token. Endpoint to validate JWT token. Build in PostGResql JWT
+
+Stack:
+https://auth0.com/blog/how-to-handle-jwt-in-python/
+https://fastapi.tiangolo.com/
+https://www.postgresql.org/
+https://react.dev/
+https://auth0.com/blog/how-to-handle-jwt-in-python/
+https://fastapi.tiangolo.com/tutorial/sql-databases/?h=sql
+
+
+Transcript directions from meeting:
+"""Here is the transcript thats important:
+More about each other, and then maybe brainstorm the, the user authentication piece on this application.
+we'll have a user table, where we'll have a first name, last name, and a user ID.
+We will design the authentication this way.
+And I think that'll be a huge win. If you next week, you come in, and you have a symbol.
+ABI?"""
