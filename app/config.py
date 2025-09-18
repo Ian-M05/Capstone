@@ -4,7 +4,6 @@ import os
 class Settings:
     app_name: str = "CapstoneAuth"
     secret_key: str = os.getenv("SECRET_KEY", "CHANGE_ME_TO_A_256_BIT_SECRET")
-    algorithm: str = os.getenv("ALGORITHM", "HS256")
     access_token_expire_minutes: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "60"))
 
     postgres_user: str = os.getenv("POSTGRES_USER", "postgres")

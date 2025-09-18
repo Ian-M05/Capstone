@@ -35,16 +35,19 @@ def verify_password(plain_password: str, stored_value: str) -> bool:
     return hmac.compare_digest(computed.hex(), stored_hex)
 
 
+ALGORITHM = "HS256"
+
+
 def create_access_token(subject: str, expires_minutes: Optional[int] = None) -> str:
     expire = datetime.now(timezone.utc) + timedelta(
         minutes=expires_minutes or settings.access_token_expire_minutes
     )
     to_encode = {"sub": subject, "exp": expire}
-    return jwt.encode(to_encode, settings.secret_key, algorithm=settings.algorithm)
+    return jwt.encode(to_encode, settings.secret_key, algorithm=ALGORITHM)
 
 
 def decode_token(token: str) -> Optional[dict]:
     try:
-        return jwt.decode(token, settings.secret_key, algorithms=[settings.algorithm])
+        return jwt.decode(token, settings.secret_key, algorithms=[ALGORITHM])
     except JWTError:
         return None

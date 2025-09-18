@@ -21,9 +21,6 @@ class UserOut(BaseModel):
     email: EmailStr
     username: str
 
-    class Config:
-        from_attributes = True
-
 
 class TokenResponse(BaseModel):
     access_token: str
