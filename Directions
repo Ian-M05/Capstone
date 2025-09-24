@@ -21,3 +21,5 @@ we'll have a user table, where we'll have a first name, last name, and a user ID
 We will design the authentication this way.
 And I think that'll be a huge win. If you next week, you come in, and you have a symbol.
 ABI?"""
+
+ SELECT id, first_name, last_name, email, username FROM users;
